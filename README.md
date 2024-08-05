@@ -28,15 +28,31 @@ dataset.py: 创建MySQL数据库。
 connect.py: 连接数据库模块，负责与MySQL数据库建立连接。  
 create_table.py: 创建数据表模块，创建一个名为book_info的数据表，用于存储图书信息。  
 insert_info.py: 插入数据模块，向数据表中插入图书信息。  
-test.py: 进行数据库连接测试，数据表创建测试及数据插入测试，保数据库连接配置正确，并确保目标网站可以访问。  
+test.py: 进行数据库连接测试，数据表创建测试及数据插入测试，确保数据库连接配置正确，并确保目标网站可以访问。  
 main.py: 主程序模块，负责爬取网页数据，并调用插入数据模块将信息存入数据库。  
 ## 环境配置
+开发工具：PyCharm
 数据库管理工具：Navicat Premium   
-Python 3.7  
+编译器：Python 3.7  
 pip install selenium  
 pip install pymysql  
 
 # 使用文档
+## 具体流程
+1.配置数据库：在运行脚本前，请确保MySQL服务已启动，并根据需要修改数据库连接参数。  
+2.运行python dataset.py
+3.运行python connect.py，这个模块定义了一个函数connect_mysql()，用于连接MySQL数据库，并返回连接对象。我们需要提供数据库的主机地址、用户名、密码、数据库名以及字符集等信息。  
+4.运行python create_table.py，在这个模块中，我们使用了connect.py中定义的连接函数，连接到MySQL数据库。然后，我们使用SQL语句创建了一个名为book_info的数据表，用于存储图书信息。  
+5.运行python insert_info.py，这个模块定义了一个函数insert_info(info)，用于向数据库中插入图书信息。我们需要提供待插入的图书信息作为参数，并通过SQL语句执行插入操作。  
+6.运行python test.py，这个模块对数据库连接测试，数据表创建测试及数据插入进行简单的测试，确保在爬取数据时能够正常运行。 
+7.运行python main.py，这是项目的核心模块，主要负责爬取网页数据。我们使用了Selenium库来模拟浏览器行为，从指定的网站获取图书信息。然后，我们调用插入数据模块将信息存入数据库。  
+## 实现过程
+1.运行main.py，它会打开一个Chrome浏览器窗口，并访问指定的网站（https://spa5.scrape.center）。  
+2.通过Selenium模拟点击页面中的链接，进入到具体的图书信息页面。  
+3.在每个图书信息页面中，我们使用Selenium获取图书的标题、评分、标签、价格、作者、出版日期、出版社、页数和ISBN等信息。  
+4.我们调用插入数据模块，将获取到的信息存入MySQL数据库中的book_info表中。  
+5.我们在循环中重复以上步骤，直到获取了足够的图书信息为止。  
+
 # 测试文档
 # 爬取数据展示
 ![image](https://github.com/user-attachments/assets/732e5be3-502a-439f-9588-0ec78250e369)
