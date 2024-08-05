@@ -11,16 +11,16 @@
 数据库名称：Scrape_book  
 表名称：book_info  
 表结构：  
-key： INT AUTO_INCREMENT PRIMARY KEY
-title：VARCHAR(50)
-score： VARCHAR(20)
-typeN：VARCHAR(50)
-price： VARCHAR(20)
-author： VARCHAR(50)
-published_at： VARCHAR(50)
-page_number： VARCHAR(50)
-publisher： VARCHAR(50)
-isbm： VARCHAR(50)
+key INT AUTO_INCREMENT PRIMARY KEY：主键，唯一标识表中每一行，自动递增。  
+title VARCHAR(50)：存储书籍标题，据类型是可变长度字符串，最大长度为50个字符。  
+score VARCHAR(20)：存储书籍的评分。  
+typeN VARCHAR(50)：存储书籍的类型或类别。  
+price VARCHAR(20)：存储书籍价格。  
+author VARCHAR(50)：存储书籍作者。  
+published_at  VARCHAR(50)：存储书籍出版日期。  
+page_number VARCHAR(50)：存储书籍的页数。  
+publisher VARCHAR(50)：存储书籍的出版社。  
+isbm VARCHAR(50)：存储书籍的ISBN号码。  
 
 # 说明文档
 ## 文件结构
@@ -31,6 +31,7 @@ insert_info.py: 插入数据模块，向数据表中插入图书信息。
 test.py: 进行数据库连接测试，数据表创建测试及数据插入测试，保数据库连接配置正确，并确保目标网站可以访问。  
 main.py: 主程序模块，负责爬取网页数据，并调用插入数据模块将信息存入数据库。  
 ## 环境配置
+数据库管理工具：Navicat Premium   
 Python 3.7  
 pip install selenium  
 pip install pymysql  
