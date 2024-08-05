@@ -40,7 +40,7 @@ pip install pymysql
 # 使用文档
 ## 具体流程
 1.配置数据库：在运行脚本前，请确保MySQL服务已启动，并根据需要修改数据库连接参数。  
-2.运行python dataset.py
+2.运行python dataset.py  
 3.运行python connect.py，这个模块定义了一个函数connect_mysql()，用于连接MySQL数据库，并返回连接对象。我们需要提供数据库的主机地址、用户名、密码、数据库名以及字符集等信息。  
 4.运行python create_table.py，在这个模块中，我们使用了connect.py中定义的连接函数，连接到MySQL数据库。然后，我们使用SQL语句创建了一个名为book_info的数据表，用于存储图书信息。  
 5.运行python insert_info.py，这个模块定义了一个函数insert_info(info)，用于向数据库中插入图书信息。我们需要提供待插入的图书信息作为参数，并通过SQL语句执行插入操作。  
