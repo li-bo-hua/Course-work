@@ -1,4 +1,3 @@
-# 此代码为数据库的创建，如果已经有数据库，则可忽略
 import pymysql
 
 conn = pymysql.connect(
