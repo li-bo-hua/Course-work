@@ -28,7 +28,7 @@ dataset.py: 创建MySQL数据库。
 connect.py: 连接数据库模块，负责与MySQL数据库建立连接。  
 create_table.py: 创建数据表模块，创建一个名为book_info的数据表，用于存储图书信息。  
 insert_info.py: 插入数据模块，向数据表中插入图书信息。  
-test.py: 进行数据库连接测试，数据表创建测试及数据插入测试，确保数据库连接配置正确，并确保目标网站可以访问。  
+test.py: 确保数据库连接配置正确，并确保目标网站可以访问。  
 main.py: 主程序模块，负责爬取网页数据，并调用插入数据模块将信息存入数据库。  
 ## 环境配置
 开发工具：PyCharm
@@ -54,6 +54,12 @@ pip install pymysql
 5.我们在循环中重复以上步骤，直到获取了足够的图书信息为止。  
 
 # 测试文档
+## 测试目标
+验证各模块功能，确保数据库连接、数据表创建和数据插入正常工作。
+## 测试用例
+1.数据库连接测试，定义了test_connect_mysql()函数，测试数据库连接是否正常。    
+2. 数据表创建测试，定义了def test_create_tables()函数，测试数据表是否能成功创建。    
+3. 数据插入测试，定义了def test_insert_info()，测试能否成功插入数据。  
 # 爬取数据展示
 ![image](https://github.com/user-attachments/assets/732e5be3-502a-439f-9588-0ec78250e369)
 
