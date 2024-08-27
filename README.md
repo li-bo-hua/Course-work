@@ -61,6 +61,7 @@ pip install pymysql
 2. 数据表创建测试，定义了def test_create_tables()函数，测试数据表是否能成功创建。    
 3. 数据插入测试，定义了def test_insert_info()，测试能否成功插入数据。  
 # 爬取数据展示
+总共爬取了1617条数据，若想获取更多的数据，重复运行主函数即可。
 ![image](https://github.com/user-attachments/assets/732e5be3-502a-439f-9588-0ec78250e369)
 
 
