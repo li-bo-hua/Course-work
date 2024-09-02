@@ -31,8 +31,9 @@ insert_info.py: 插入数据模块，向数据表中插入图书信息。
 test.py: 确保数据库连接配置正确，并确保目标网站可以访问。  
 main.py: 主程序模块，负责爬取网页数据，并调用插入数据模块将信息存入数据库。  
 ## 环境配置
-开发工具：PyCharm
-数据库管理工具：Navicat Premium       
+开发工具：PyCharm  
+数据库管理工具：Navicat Premium  
+
 编译器：Python 3.7  
 pip install selenium  
 pip install pymysql  
