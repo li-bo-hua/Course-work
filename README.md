@@ -44,7 +44,7 @@ pip install pymysql
 3.运行python connect.py，这个模块定义了一个函数connect_mysql()，用于连接MySQL数据库，并返回连接对象。我们需要提供数据库的主机地址、用户名、密码、数据库名以及字符集等信息。  
 4.运行python create_table.py，在这个模块中，我们使用了connect.py中定义的连接函数，连接到MySQL数据库。然后，我们使用SQL语句创建了一个名为book_info的数据表，用于存储图书信息。  
 5.运行python insert_info.py，这个模块定义了一个函数insert_info(info)，用于向数据库中插入图书信息。我们需要提供待插入的图书信息作为参数，并通过SQL语句执行插入操作。  
-6.运行python test.py，这个模块对数据库连接测试，数据表创建测试及数据插入进行简单的测试，确保在爬取数据时能够正常运行。 
+6.运行python test.py，这个模块对数据库连接测试，数据表创建测试及数据插入进行简单的测试，确保在爬取数据时能够正常运行。  
 7.运行python main.py，这是项目的核心模块，主要负责爬取网页数据。我们使用了Selenium库来模拟浏览器行为，从指定的网站获取图书信息。然后，我们调用插入数据模块将信息存入数据库。  
 ## 实现过程
 1.运行main.py，它会打开一个Chrome浏览器窗口，并访问指定的网站（https://spa5.scrape.center）。  
