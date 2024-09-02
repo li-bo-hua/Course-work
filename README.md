@@ -33,7 +33,6 @@ main.py: 主程序模块，负责爬取网页数据，并调用插入数据模�
 ## 环境配置
 开发工具：PyCharm  
 数据库管理工具：Navicat Premium  
-
 编译器：Python 3.7  
 pip install selenium  
 pip install pymysql  
